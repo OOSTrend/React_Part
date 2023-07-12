@@ -45,25 +45,32 @@ import Nft1 from "assets/img/nfts/Nft1.png";
 
 export default function Marketplace() {
   // Chakra Color Mode
-  const textColor = useColorModeValue("secondaryGray.900", "white");
-  const textColorBrand = useColorModeValue("brand.500", "white");
-
-  
-  return (
-    <iframe
-    src="https://public.tableau.com/views/_16890614990300/1?:language=ko-KR&:display_count=n&:origin=viz_share_link?:showVizHome=no&:embed=true "
-    width="70%"
-    height="800"
-    title='test'/>
-  );
-
+  // const textColor = useColorModeValue("secondaryGray.900", "white");
+  // const textColorBrand = useColorModeValue("brand.500", "white");
 
   return (
     <Box pt={{ base: "180px", md: "80px", xl: "80px" }}>
-      {/* Main Fields */}
+    {/* Main Fields */}
+    <flex>
+      <iframe
+      src="https://public.tableau.com/views/_16890614990300/1?:language=ko-KR&:display_count=n&:origin=viz_share_link?:showVizHome=no&:embed=true "
+      width="100%"
+      height="900"
+      title='test'/>
+    </flex>
 
-
-      {/* Delete Product */}
+    {/* Delete Product */}
     </Box>
+
   );
+
+
+  // return (
+  //   <Box pt={{ base: "180px", md: "80px", xl: "80px" }}>
+  //     {/* Main Fields */}
+
+
+  //     {/* Delete Product */}
+  //   </Box>
+  // );
 }
