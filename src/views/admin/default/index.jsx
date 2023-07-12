@@ -96,7 +96,7 @@ export default function UserReports() {
           name='Spend this month'
           value='$642.39'
         />
-        <MiniStatistics growth='+23%' name='Sales' value='$574.34' />
+        <MiniStatistics growth='+23%' name='클릭율' value='스마트 워치' />
         <MiniStatistics
           endContent={
             <Flex me='-16px' mt='10px'>
@@ -141,8 +141,8 @@ export default function UserReports() {
               }
             />
           }
-          name='Total Projects'
-          value='2935'
+          name='볼수있는 카테고리'
+          value='120개'
         />
       </SimpleGrid>
 

@@ -1,4 +1,4 @@
-<!--
+/*!
   _   _  ___  ____  ___ ________  _   _   _   _ ___   
  | | | |/ _ \|  _ \|_ _|__  / _ \| \ | | | | | |_ _| 
  | |_| | | | | |_) || |  / / | | |  \| | | | | || | 
@@ -18,22 +18,52 @@
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
--->
+*/
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/icon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <title itemprop="name">OOSTrend</title>
-    <!-- Manifest and apple icon -->
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-  </body>
-</html>
+import React, { useEffect } from "react";
+// Chakra imports
+import {
+  Box,
+  Button,
+  Flex,
+  Grid,
+  Link,
+  Text,
+  useColorModeValue,
+  SimpleGrid,
+} from "@chakra-ui/react";
+
+// Custom components
+import Banner from "views/admin/marketplace/components/Banner";
+
+
+// Assets
+import Nft1 from "assets/img/nfts/Nft1.png";
+// 
+
+
+
+export default function Marketplace() {
+  // Chakra Color Mode
+  const textColor = useColorModeValue("secondaryGray.900", "white");
+  const textColorBrand = useColorModeValue("brand.500", "white");
+
+  
+  return (
+    <iframe
+    src="https://public.tableau.com/views/_16890614990300/1?:language=ko-KR&:display_count=n&:origin=viz_share_link?:showVizHome=no&:embed=true "
+    width="70%"
+    height="800"
+    title='test'/>
+  );
+
+
+  return (
+    <Box pt={{ base: "180px", md: "80px", xl: "80px" }}>
+      {/* Main Fields */}
+
+
+      {/* Delete Product */}
+    </Box>
+  );
+}
