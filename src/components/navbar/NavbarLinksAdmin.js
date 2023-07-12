@@ -51,7 +51,7 @@ export default function HeaderLinks(props) {
 			p="10px"
 			borderRadius="30px"
 			boxShadow={shadow}>
-			<SearchBar mb={secondary ? { base: '10px', md: 'unset' } : 'unset'} me="10px" borderRadius="30px" />
+			{/* <SearchBar mb={secondary ? { base: '10px', md: 'unset' } : 'unset'} me="10px" borderRadius="30px" /> */}
 			<Flex
 				bg={ethBg}
 				display={secondary ? 'flex' : 'none'}
@@ -73,40 +73,41 @@ export default function HeaderLinks(props) {
 			</Flex>
 			<SidebarResponsive routes={routes} />
 			<Menu>
-				<MenuButton p="0px">
+				{/* <MenuButton p="0px">
 					<Icon mt="6px" as={MdNotificationsNone} color={navbarIcon} w="18px" h="18px" me="10px" />
-				</MenuButton>
+				</MenuButton> */}
 				<MenuList
 					boxShadow={shadow}
 					p="20px"
 					borderRadius="20px"
 					bg={menuBg}
 					border="none"
-					mt="22px"
-					me={{ base: '30px', md: 'unset' }}
+					mt="20px"
+					me={{ base: '20px', md: 'unset' }}
 					minW={{ base: 'unset', md: '400px', xl: '450px' }}
 					maxW={{ base: '360px', md: 'unset' }}>
-					<Flex jusitfy="space-between" w="100%" mb="20px">
+					{/* <Flex jusitfy="space-between" w="100%" mb="20px">
 						<Text fontSize="md" fontWeight="600" color={textColor}>
 							Notifications
 						</Text>
 						<Text fontSize="sm" fontWeight="500" color={textColorBrand} ms="auto" cursor="pointer">
 							Mark all read
 						</Text>
-					</Flex>
-					<Flex flexDirection="column">
-						<MenuItem _hover={{ bg: 'none' }} _focus={{ bg: 'none' }} px="0" borderRadius="8px" mb="10px">
+					</Flex> */}
+					{/* <Flex flexDirection="column">
+						테마 설정 가능 */}
+						{/* <MenuItem _hover={{ bg: 'none' }} _focus={{ bg: 'none' }} px="0" borderRadius="8px" mb="10px">
 							<ItemContent info="Horizon UI Dashboard PRO" aName="Alicia" />
 						</MenuItem>
 						<MenuItem _hover={{ bg: 'none' }} _focus={{ bg: 'none' }} px="0" borderRadius="8px" mb="10px">
 							<ItemContent info="Horizon Design System Free" aName="Josh Henry" />
-						</MenuItem>
-					</Flex>
+						</MenuItem> */}
+					{/* </Flex> */}
 				</MenuList>
 			</Menu>
 
       <Menu>
-        <MenuButton p='0px'>
+        {/* <MenuButton p='0px'>
           <Icon
             mt='6px'
             as={MdInfoOutline}
@@ -115,8 +116,8 @@ export default function HeaderLinks(props) {
             h='18px'
             me='10px'
           />
-        </MenuButton>
-        <MenuList
+        </MenuButton> */}
+        {/* <MenuList
           boxShadow={shadow}
           p='20px'
           me={{ base: "30px", md: "unset" }}
@@ -161,13 +162,13 @@ export default function HeaderLinks(props) {
               </Button>
             </Link>
           </Flex>
-        </MenuList>
+        </MenuList> */}
       </Menu>
 
 			<ThemeEditor navbarIcon={navbarIcon} />
 
 			<Menu>
-				<MenuButton p="0px">
+				{/* <MenuButton p="0px">
 					<Avatar
 						_hover={{ cursor: 'pointer' }}
 						color="white"
@@ -209,7 +210,7 @@ export default function HeaderLinks(props) {
 							<Text fontSize="sm">Log out</Text>
 						</MenuItem>
 					</Flex>
-				</MenuList>
+				</MenuList> */}
 			</Menu>
 		</Flex>
 	);
