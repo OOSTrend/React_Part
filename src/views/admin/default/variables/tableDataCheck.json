@@ -27,5 +27,35 @@
   "type": "PC+MO", 
   "date": "3 Jun 2023",
   "rate": 11.7 
+},
+{
+  "name":["스포츠/레저",false],
+  "type": "PC+MO", 
+  "date": "3 Jun 2023",
+  "rate": 7.24 
+},
+{
+  "name":["식품",false],
+  "type": "PC+MO", 
+  "date": "3 Jun 2023",
+  "rate": 6.18 
+},
+{
+  "name":["출산/육아",false],
+  "type": "PC+MO", 
+  "date": "3 Jun 2023",
+  "rate": 3.73 
+},
+{
+  "name":["패션잡화",false],
+  "type": "PC+MO", 
+  "date": "3 Jun 2023",
+  "rate": 7.72 
+},
+{
+  "name":["화장품",false],
+  "type": "PC+MO", 
+  "date": "3 Jun 2023",
+  "rate": 2.99 
 }
 ]

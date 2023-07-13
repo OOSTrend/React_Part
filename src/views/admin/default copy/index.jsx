@@ -84,8 +84,8 @@ export default function UserReports() {
           used={25.6}
           total={50}
           gridArea={{
-            base: "1 / 1 / 4 / 2",
-            lg: "1 / 1 / 3 / 3",
+            base: "3 / 1 / 4 / 2",
+            lg: "2 / 1 / 3 / 3",
             "2xl": "1 / 3 / 2 / 4",
           }}
         />

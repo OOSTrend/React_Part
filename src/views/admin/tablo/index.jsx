@@ -35,34 +35,193 @@ import {
 
 // Custom components
 import Banner from "views/admin/marketplace/components/Banner";
+import NFT from "components/card/NFT";
+import Card from "components/card/Card.js";
 
 
 // Assets
 import Nft1 from "assets/img/nfts/Nft1.png";
+import Nft2 from "assets/img/nfts/Nft2.png";
+import Nft3 from "assets/img/nfts/Nft3.png";
+import Nft4 from "assets/img/nfts/Nft4.png";
+import Nft5 from "assets/img/nfts/Nft5.png";
+import Nft6 from "assets/img/nfts/Nft6.png";
+import Avatar1 from "assets/img/avatars/avatar1.png";
+import Avatar2 from "assets/img/avatars/avatar2.png";
+import Avatar3 from "assets/img/avatars/avatar3.png";
+import Avatar4 from "assets/img/avatars/avatar4.png";
 // 
 
+export default function Tablo() {
+  // Chakra Color Mode
+  const textColor = useColorModeValue("secondaryGray.900", "white");
+  const textColorBrand = useColorModeValue("brand.500", "white");
+  return (
+    <Box pt={{ base: "180px", md: "80px", xl: "80px" }}>
+      {/* Main Fields */}
+      <Grid
+        mb='20px'
+        gridTemplateColumns={{ xl: "repeat(3, 1fr)", "2xl": "1fr 0.46fr" }}
+        gap={{ base: "20px", xl: "20px" }}
+        display={{ base: "block", xl: "grid" }}>
+        <Flex
+          flexDirection='column'
+          gridArea={{ xl: "1 / 1 / 2 / 3", "2xl": "1 / 1 / 2 / 2" }}>
+          {/* <Banner /> */}
+          <Flex direction='column'>
+            <Flex
+              mt='45px'
+              mb='20px'
+              justifyContent='space-between'
+              direction={{ base: "column", md: "row" }}
+              align={{ base: "start", md: "center" }}>
+              <Text color={textColor} fontSize='2xl' ms='24px' fontWeight='700'>
+                Tablo Analysis Story
+              </Text>
+              {/* <Flex
+                align='center'
+                me='20px'
+                ms={{ base: "24px", md: "0px" }}
+                mt={{ base: "20px", md: "0px" }}>
+                <Link
+                  color={textColorBrand}
+                  fontWeight='500'
+                  me={{ base: "34px", md: "44px" }}
+                  to='#art'>
+                  분석파트1
+                </Link>
+                <Link
+                  color={textColorBrand}
+                  fontWeight='500'
+                  me={{ base: "34px", md: "44px" }}
+                  to='#music'>
+                  분석파트2
+                </Link>
+                {/* <Link
+                  color={textColorBrand}
+                  fontWeight='500'
+                  me={{ base: "34px", md: "44px" }}
+                  to='#collectibles'>
+                  생활/건강
+                </Link>
+                <Link color={textColorBrand} fontWeight='500' to='#sports'>
+                  스포츠/레저
+                </Link> */}
+              {/* </Flex> */}
+            </Flex>
+            <SimpleGrid columns={{ base: 1, md: 4 }} gap='20px'>
+              <NFT
+                name='태블로 샘플 파트 1'
+                author='태블로 샘플 1'
+                bidders={[
+                  Avatar1,
+                  Avatar2,
+                  Avatar3,
+                  Avatar4,
+                  Avatar1,
+                  Avatar1,
+                  Avatar1,
+                  Avatar1,
+                ]}
+                image={Nft1}
+                // currentbid='0.91 ETH'
+                download='#'
+              />
+              <NFT
+                name='태블로 샘플 파트 2'
+                author='태블로 샘플 2'
+                bidders={[
+                  Avatar1,
+                  Avatar2,
+                  Avatar3,
+                  Avatar4,
+                  Avatar1,
+                  Avatar1,
+                  Avatar1,
+                  Avatar1,
+                ]}
+                image={Nft2}
+                // currentbid='0.91 ETH'
+                download='#'
+              />
+              <NFT
+                name='태블로 샘플 파트 2'
+                author='태블로 샘플 2'
+                bidders={[
+                  Avatar1,
+                  Avatar2,
+                  Avatar3,
+                  Avatar4,
+                  Avatar1,
+                  Avatar1,
+                  Avatar1,
+                  Avatar1,
+                ]}
+                image={Nft2}
+                // currentbid='0.91 ETH'
+                download='#'
+              />
+              <NFT
+                name='태블로 샘플 파트 2'
+                author='태블로 샘플 2'
+                bidders={[
+                  Avatar1,
+                  Avatar2,
+                  Avatar3,
+                  Avatar4,
+                  Avatar1,
+                  Avatar1,
+                  Avatar1,
+                  Avatar1,
+                ]}
+                image={Nft2}
+                // currentbid='0.91 ETH'
+                download='#'
+              />
+            </SimpleGrid>
+          </Flex>
+        </Flex>
+      </Grid>
+      {/* Delete Product */}
+    </Box>
+  );
+}
 
-
-export default function Marketplace() {
+// export default function Marketplace() {
   // Chakra Color Mode
   // const textColor = useColorModeValue("secondaryGray.900", "white");
   // const textColorBrand = useColorModeValue("brand.500", "white");
 
-  return (
-    <Box pt={{ base: "180px", md: "80px", xl: "80px" }}>
-    {/* Main Fields */}
-    <flex>
-      <iframe
-      src="https://public.tableau.com/views/_16890614990300/1?:language=ko-KR&:display_count=n&:origin=viz_share_link?:showVizHome=no&:embed=true "
-      width="100%"
-      height="900"
-      title='test'/>
-    </flex>
 
-    {/* Delete Product */}
-    </Box>
 
-  );
+
+
+
+
+
+
+
+
+
+
+
+  
+  // return (
+  //   <Box pt={{ base: "180px", md: "80px", xl: "80px" }}>
+  //   {/* Main Fields */}
+  //   <flex>
+  //     <iframe
+  //     src = "https://public.tableau.com/shared/5NMZWJ5X4?:display_count=n&:origin=viz_share_link?:showVizHome=no&:embed=true"
+  //     //src="https://public.tableau.com/views/_16890614990300/1?:language=ko-KR&:display_count=n&:origin=viz_share_link?:showVizHome=no&:embed=true "
+  //     width="100%"
+  //     height="900"
+  //     title='test'/>
+  //   </flex>
+
+  //   {/* Delete Product */}
+  //   </Box>
+
+  // );
 
 
   // return (
@@ -73,4 +232,4 @@ export default function Marketplace() {
   //     {/* Delete Product */}
   //   </Box>
   // );
-}
+// }

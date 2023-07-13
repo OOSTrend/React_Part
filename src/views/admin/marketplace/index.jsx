@@ -91,16 +91,16 @@ export default function Marketplace() {
                   fontWeight='500'
                   me={{ base: "34px", md: "44px" }}
                   to='#art'>
-                  가구인테리어
+                  분석파트1
                 </Link>
                 <Link
                   color={textColorBrand}
                   fontWeight='500'
                   me={{ base: "34px", md: "44px" }}
                   to='#music'>
-                  디지털/가전
+                  분석파트2
                 </Link>
-                <Link
+                {/* <Link
                   color={textColorBrand}
                   fontWeight='500'
                   me={{ base: "34px", md: "44px" }}
@@ -109,13 +109,13 @@ export default function Marketplace() {
                 </Link>
                 <Link color={textColorBrand} fontWeight='500' to='#sports'>
                   스포츠/레저
-                </Link>
+                </Link> */}
               </Flex>
             </Flex>
             <SimpleGrid columns={{ base: 1, md: 3 }} gap='20px'>
               <NFT
-                name='창민님의 태블로 세계로'
-                author='전창민'
+                name='세부 분석 파트 1'
+                author='1조 분석파트'
                 bidders={[
                   Avatar1,
                   Avatar2,
@@ -131,8 +131,8 @@ export default function Marketplace() {
                 download='#'
               />
               <NFT
-                name='ETH AI Brain'
-                author='By Nick Wilson'
+                name='세부 분석 파트 2'
+                author='1조 분석 파트'
                 bidders={[
                   Avatar1,
                   Avatar2,
@@ -145,88 +145,6 @@ export default function Marketplace() {
                 ]}
                 image={Nft2}
                 // currentbid='0.91 ETH'
-                download='#'
-              />
-              <NFT
-                name='Mesh Gradients '
-                author='By Will Smith'
-                bidders={[
-                  Avatar1,
-                  Avatar2,
-                  Avatar3,
-                  Avatar4,
-                  Avatar1,
-                  Avatar1,
-                  Avatar1,
-                  Avatar1,
-                ]}
-                image={Nft3}
-                // currentbid='0.91 ETH'
-                download='#'
-              />
-            </SimpleGrid>
-            <Text
-              mt='45px'
-              mb='36px'
-              color={textColor}
-              fontSize='2xl'
-              ms='24px'
-              fontWeight='700'>
-              Recently Added
-            </Text>
-            <SimpleGrid
-              columns={{ base: 1, md: 3 }}
-              gap='20px'
-              mb={{ base: "20px", xl: "0px" }}>
-              <NFT
-                name='가구/인테리어'
-                author='이종웅'
-                bidders={[
-                  Avatar1,
-                  Avatar2,
-                  Avatar3,
-                  Avatar4,
-                  Avatar1,
-                  Avatar1,
-                  Avatar1,
-                  Avatar1,
-                ]}
-                image={Nft4}
-                currentbid='0.91 ETH'
-                download='#'
-              />
-              <NFT
-                name='Colorful Heaven'
-                author='By Mark Benjamin'
-                bidders={[
-                  Avatar1,
-                  Avatar2,
-                  Avatar3,
-                  Avatar4,
-                  Avatar1,
-                  Avatar1,
-                  Avatar1,
-                  Avatar1,
-                ]}
-                image={Nft5}
-                currentbid='0.91 ETH'
-                download='#'
-              />
-              <NFT
-                name='3D Cubes Art'
-                author='By Manny Gates'
-                bidders={[
-                  Avatar1,
-                  Avatar2,
-                  Avatar3,
-                  Avatar4,
-                  Avatar1,
-                  Avatar1,
-                  Avatar1,
-                  Avatar1,
-                ]}
-                image={Nft6}
-                currentbid='0.91 ETH'
                 download='#'
               />
             </SimpleGrid>
@@ -242,7 +160,7 @@ export default function Marketplace() {
             />
           </Card>
           <Card p='0px'>
-            <Flex
+            {/* <Flex
               align={{ sm: "flex-start", lg: "center" }}
               justify='space-between'
               w='100%'
@@ -252,9 +170,9 @@ export default function Marketplace() {
                 History
               </Text>
               <Button variant='action'>See all</Button>
-            </Flex>
+            </Flex> */}
 
-            <HistoryItem
+            {/* <HistoryItem
               name='Colorful Heaven'
               author='By Mark Benjamin'
               date='30s ago'
@@ -295,7 +213,7 @@ export default function Marketplace() {
               date='3m ago'
               image={Nft6}
               price='0.91 ETH'
-            />
+            /> */}
           </Card>
         </Flex>
       </Grid>
