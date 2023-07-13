@@ -41,7 +41,7 @@ import { OOSTrendLogo } from "components/icons/Icons";
 // import { NaverLogo } from "components/icons/Icons";
 // import { ReactComponent as Coupang } from "./Coupang_logo.svg";
 import { ReactComponent as Naver } from "./Naver_Logotype.svg";
-import Coupang from "assets/img/logo/Coupang.png";
+import { CoupangLogo } from "components/icons/Icons";
 import React from "react";
 import {
   MdAddTask,
@@ -79,16 +79,12 @@ export default function UserReports() {
             <IconBox
               w='56px'
               h='56px'
-              bg={boxBg}
-              bidders={
-                [Coupang]
-              }              
-              
-              // icon={
-              //   <Icon w='32px' h='32px' as={Coupang} color={brandColor} />
-              //   //<Icon w='32px' h='32px' as={Coupang}/>
+              bg={boxBg}       
+              icon={
+                <Icon w='32px' h='32px' as={CoupangLogo} color={brandColor} />
+                //<Icon w='32px' h='32px' as={Coupang}/>
                 
-              // }
+              }
             />
           }
           name='Coupang'
