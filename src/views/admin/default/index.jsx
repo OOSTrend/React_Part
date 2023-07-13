@@ -83,14 +83,14 @@ export default function UserReports() {
               h='56px'
               bg={boxBg}       
               icon={
-                <Icon w='32px' h='32px' as={CoupangLogo} color={brandColor} />
-                //<Icon w='32px' h='32px' as={Coupang}/>
+                //<Icon w='32px' h='32px' as={CoupangLogo} color={brandColor} />
+                <Icon w='32px' h='32px' as={Naver} color={brandColor} />
                 
               }
             />
           }
-          name='Coupang'
-          value='37.7%'
+          name='점유율'
+          value='27.2%'
         />
         <MiniStatistics
           startContent={
@@ -104,8 +104,8 @@ export default function UserReports() {
               }
             />
           }
-          name='Naver 쇼핑'
-          value='27.2%'
+          name='대분류'
+          value='10개 기준'
         />
         {/* <MiniStatistics growth='+23%' name='클릭율' value='스마트 워치' /> */}
         {/* <MiniStatistics

@@ -6,7 +6,6 @@ import { Flex, useColorModeValue } from "@chakra-ui/react";
 // Custom components
 // import { HorizonLogo } from "components/icons/Icons";
 import { HSeparator } from "components/separator/Separator";
-//import { OOSTrendLogo } from "components/icons/Icons";
 import { OOSTLogo } from "components/icons/Icons";
 export function SidebarBrand() {
   //   Chakra color mode

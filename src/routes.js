@@ -16,7 +16,6 @@ import Profile from "views/admin/profile";
 import DataTables from "views/admin/dataTables";
 import RTL from "views/admin/rtl";
 import Tablo from "views/admin/tablo";
-import Sample from "views/admin/default copy";
 
 // Auth Imports
 import SignInCentered from "views/auth/signIn";
@@ -79,13 +78,6 @@ const routes = [
     path: "/tablo",
     icon: <Icon as={MdBarChart} width='20px' height='20px' color='inherit' />,
     component: Tablo,
-  },
-  {
-    name: "Sample",
-    layout: "/admin",
-    icon: <Icon as={MdBarChart} width='20px' height='20px' color='inherit' />,
-    path: "/sample",
-    component: Sample,
   },
 ];
 

@@ -23,37 +23,35 @@ export default function GeneralInformation(props) {
         fontSize='2xl'
         mt='10px'
         mb='4px'>
-        General Information
+        Brief Information
       </Text>
       <Text color={textColorSecondary} fontSize='md' me='26px' mb='40px'>
-        As we live, our hearts turn colder. Cause pain is what we go through as
-        we become older. We get insulted by others, lose trust for those others.
-        We get back stabbed by friends. It becomes harder for us to give others
-        a hand. We get our heart broken by people we love, even that we give
-        them all...
+        모든 기간동안, 모바일 매출액이 높은데, 검색량은 pc에서 더 많다니…?
+        모바일 매출액이 높은 이유? 
+        간편결제방식, 쇼핑 어플 전용 할인혜택, PC보다는 시간과 장소 제약 없이 사용할 수 있음
       </Text>
       <SimpleGrid columns='2' gap='20px'>
         <Information
           boxShadow={cardShadow}
-          title='Education'
-          value='Stanford University'
+          title='Data'
+          value='통계청 데이터'
         />
         <Information
           boxShadow={cardShadow}
-          title='Languages'
-          value='English, Spanish, Italian'
+          title='기간'
+          value='2021년 5월 ~ 23년 5월(2개년)'
         />
         <Information
           boxShadow={cardShadow}
-          title='Department'
-          value='Product Design'
+          title='Data'
+          value='네이버 쇼핑 API'
         />
         <Information
           boxShadow={cardShadow}
-          title='Work History'
-          value='Google, Facebook'
+          title='기간'
+          value='2021년 5월 ~ 23년 5월(2개년)'
         />
-        <Information
+        {/* <Information
           boxShadow={cardShadow}
           title='Organization'
           value='Simmmple Web LLC'
@@ -62,7 +60,7 @@ export default function GeneralInformation(props) {
           boxShadow={cardShadow}
           title='Birthday'
           value='20 July 1986'
-        />
+        /> */}
       </SimpleGrid>
     </Card>
   );
