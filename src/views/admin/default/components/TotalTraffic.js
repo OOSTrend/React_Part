@@ -18,9 +18,11 @@ import { RiArrowUpSFill } from "react-icons/ri";
 import {
   lineChartDataTotalSpent,
   lineChartOptionsTotalSpent,
+  lineChartDataTotalTraffic,
+  lineChartOptionsTotalTraffic,
 } from "variables/charts";
 
-export default function TotalSpent(props) {
+export default function TotalTraffic(props) {
   const { ...rest } = props;
 
   // Chakra Color Mode
@@ -86,7 +88,7 @@ export default function TotalSpent(props) {
             textAlign='start'
             fontWeight='700'
             lineHeight='100%'>
-            $137.5K
+            클릭율
           </Text>
           <Flex align='center' mb='20px'>
             <Text
@@ -100,7 +102,7 @@ export default function TotalSpent(props) {
             <Flex align='center'>
               <Icon as={RiArrowUpSFill} color='green.500' me='2px' mt='2px' />
               <Text color='green.500' fontSize='sm' fontWeight='700'>
-                +2.45%
+                +12.45%
               </Text>
             </Flex>
           </Flex>
@@ -114,8 +116,8 @@ export default function TotalSpent(props) {
         </Flex>
         <Box minH='260px' minW='75%' mt='auto'>
           <LineChart
-            chartData={lineChartDataTotalSpent}
-            chartOptions={lineChartOptionsTotalSpent}
+            chartData={lineChartDataTotalTraffic}
+            chartOptions={lineChartOptionsTotalTraffic}
           />
         </Box>
       </Flex>

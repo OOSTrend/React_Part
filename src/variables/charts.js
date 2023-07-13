@@ -262,6 +262,17 @@ export const lineChartDataTotalSpent = [
   },
 ];
 
+export const lineChartDataTotalTraffic = [
+  {
+    name: "Revenue",
+    data: [1800000, 12100000, 13000000, 14000000, 13800000, 14100000],
+  },
+  {
+    name: "Profit",
+    data: [3000000, 2300000, 6900000, 4100000, 4300000, 4200000],
+  },
+];
+
 export const lineChartOptionsTotalSpent = {
   chart: {
     toolbar: {
@@ -304,7 +315,7 @@ export const lineChartOptionsTotalSpent = {
   },
   xaxis: {
     type: "numeric",
-    categories: ["SEP", "OCT", "NOV", "DEC", "JAN", "FEB"],
+    categories: ["JUN", "SEP", "NOV", "JAN", "MAR", "MAY"],
     labels: {
       style: {
         colors: "#A3AED0",
@@ -333,4 +344,77 @@ export const lineChartOptionsTotalSpent = {
     },
   },
   color: ["#7551FF", "#39B8FF"],
+};
+
+export const lineChartOptionsTotalTraffic = {
+  chart: {
+    toolbar: {
+      show: false,
+    },
+    dropShadow: {
+      enabled: true,
+      top: 13,
+      left: 0,
+      blur: 10,
+      opacity: 0.1,
+      color: "#4318FF",
+    },
+  },
+  colors: ["#FF4000", "#00FF00"],
+  markers: {
+    size: 0,
+    colors: "white",
+    strokeColors: "#7551FF",
+    strokeWidth: 3,
+    strokeOpacity: 0.9,
+    strokeDashArray: 0,
+    fillOpacity: 1,
+    discrete: [],
+    shape: "circle",
+    radius: 2,
+    offsetX: 0,
+    offsetY: 0,
+    showNullDataPoints: true,
+  },
+  tooltip: {
+    theme: "dark",
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  stroke: {
+    curve: "smooth",
+    type: "line",
+  },
+  xaxis: {
+    type: "numeric",
+    categories: ["JUN", "SEP", "NOV", "JAN", "MAR", "MAY"],
+    labels: {
+      style: {
+        colors: "#A3AED0",
+        fontSize: "12px",
+        fontWeight: "500",
+      },
+    },
+    axisBorder: {
+      show: false,
+    },
+    axisTicks: {
+      show: false,
+    },
+  },
+  yaxis: {
+    show: false,
+  },
+  legend: {
+    show: false,
+  },
+  grid: {
+    show: false,
+    column: {
+      color: ["#FF4000", "#00FF00"],
+      opacity: 0.5,
+    },
+  },
+  color: ["#FF4000", "#00FF00"],
 };
