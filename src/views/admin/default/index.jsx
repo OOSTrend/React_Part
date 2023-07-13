@@ -37,6 +37,11 @@ import Usa from "assets/img/dashboards/usa.png";
 import MiniCalendar from "components/calendar/MiniCalendar";
 import MiniStatistics from "components/card/MiniStatistics";
 import IconBox from "components/icons/IconBox";
+import { OOSTrendLogo } from "components/icons/Icons";
+// import { NaverLogo } from "components/icons/Icons";
+// import { ReactComponent as Coupang } from "./Coupang_logo.svg";
+import { ReactComponent as Naver } from "./Naver_Logotype.svg";
+import Coupang from "assets/img/logo/Coupang.png";
 import React from "react";
 import {
   MdAddTask,
@@ -50,6 +55,7 @@ import DailyTraffic from "views/admin/default/components/DailyTraffic";
 import PieCard from "views/admin/default/components/PieCard";
 import Tasks from "views/admin/default/components/Tasks";
 import TotalSpent from "views/admin/default/components/TotalSpent";
+import TotalTraffic from "views/admin/default/components/TotalTraffic";
 import WeeklyRevenue from "views/admin/default/components/WeeklyRevenue";
 import {
   columnsDataCheck,
@@ -74,13 +80,19 @@ export default function UserReports() {
               w='56px'
               h='56px'
               bg={boxBg}
-              icon={
-                <Icon w='32px' h='32px' as={MdBarChart} color={brandColor} />
-              }
+              bidders={
+                [Coupang]
+              }              
+              
+              // icon={
+              //   <Icon w='32px' h='32px' as={Coupang} color={brandColor} />
+              //   //<Icon w='32px' h='32px' as={Coupang}/>
+                
+              // }
             />
           }
-          name='Earnings'
-          value='$350.4'
+          name='Coupang'
+          value='37.7%'
         />
         <MiniStatistics
           startContent={
@@ -89,35 +101,36 @@ export default function UserReports() {
               h='56px'
               bg={boxBg}
               icon={
-                <Icon w='32px' h='32px' as={MdAttachMoney} color={brandColor} />
+                // <Icon w='32px' h='32px' as={OOSTrendLogo} color={brandColor} />
+                <Icon w='32px' h='32px' as={Naver} color={brandColor} />
               }
             />
           }
-          name='Spend this month'
-          value='$642.39'
+          name='Naver 쇼핑'
+          value='27.2%'
         />
-        <MiniStatistics growth='+23%' name='클릭율' value='스마트 워치' />
-        <MiniStatistics
-          endContent={
-            <Flex me='-16px' mt='10px'>
-              <FormLabel htmlFor='balance'>
-                <Avatar src={Usa} />
-              </FormLabel>
-              <Select
-                id='balance'
-                variant='mini'
-                mt='5px'
-                me='0px'
-                defaultValue='usd'>
-                <option value='usd'>USD</option>
-                <option value='eur'>EUR</option>
-                <option value='gba'>GBA</option>
-              </Select>
-            </Flex>
-          }
-          name='Your balance'
-          value='$1,000'
-        />
+        {/* <MiniStatistics growth='+23%' name='클릭율' value='스마트 워치' /> */}
+        {/* <MiniStatistics
+        //   endContent={
+        //     <Flex me='-16px' mt='10px'>
+        //       <FormLabel htmlFor='balance'>
+        //         <Avatar src={Usa} />
+        //       </FormLabel>
+        //       <Select
+        //         id='balance'
+        //         variant='mini'
+        //         mt='5px'
+        //         me='0px'
+        //         defaultValue='usd'>
+        //         <option value='usd'>USD</option>
+        //         <option value='eur'>EUR</option>
+        //         <option value='gba'>GBA</option>
+        //       </Select>
+        //     </Flex>
+        //   }
+        //   name='Your balance'
+        //   value='$1,000'
+        // /> */}
         <MiniStatistics
           startContent={
             <IconBox
@@ -148,7 +161,8 @@ export default function UserReports() {
 
       <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap='20px' mb='20px'>
         <TotalSpent />
-        <WeeklyRevenue />
+        <TotalTraffic />
+        {/* //<WeeklyRevenue /> */}
       </SimpleGrid>
       <SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} gap='20px' mb='20px'>
         <CheckTable columnsData={columnsDataCheck} tableData={tableDataCheck} />
@@ -157,16 +171,16 @@ export default function UserReports() {
           <PieCard />
         </SimpleGrid>
       </SimpleGrid>
-      <SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} gap='20px' mb='20px'>
+      {/* <SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} gap='20px' mb='20px'>
         <ComplexTable
           columnsData={columnsDataComplex}
           tableData={tableDataComplex}
-        />
-        <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap='20px'>
+        /> */}
+        {/* <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap='20px'>
           <Tasks />
           <MiniCalendar h='100%' minW='100%' selectRange={false} />
-        </SimpleGrid>
-      </SimpleGrid>
+        </SimpleGrid> */}
+      {/* </SimpleGrid> */}
     </Box>
   );
 }

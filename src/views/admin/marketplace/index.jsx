@@ -114,8 +114,8 @@ export default function Marketplace() {
             </Flex>
             <SimpleGrid columns={{ base: 1, md: 3 }} gap='20px'>
               <NFT
-                name='Abstract Colors'
-                author='By Esthera Jackson'
+                name='창민님의 태블로 세계로'
+                author='전창민'
                 bidders={[
                   Avatar1,
                   Avatar2,
@@ -127,7 +127,7 @@ export default function Marketplace() {
                   Avatar1,
                 ]}
                 image={Nft1}
-                currentbid='0.91 ETH'
+                // currentbid='0.91 ETH'
                 download='#'
               />
               <NFT
