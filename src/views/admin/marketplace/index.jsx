@@ -159,7 +159,7 @@ export default function Marketplace() {
               columnsData={tableColumnsTopCreators}
             />
           </Card>
-          <Card p='0px'>
+          {/* <Card p='0px'> */}
             {/* <Flex
               align={{ sm: "flex-start", lg: "center" }}
               justify='space-between'
@@ -214,7 +214,7 @@ export default function Marketplace() {
               image={Nft6}
               price='0.91 ETH'
             /> */}
-          </Card>
+          {/* </Card> */}
         </Flex>
       </Grid>
       {/* Delete Product */}

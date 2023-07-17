@@ -31,7 +31,7 @@ import {
 
 // Assets
 
-export default function Marketplace() {
+export default function Tablo1() {
   //Chakra Color Mode
   const textColor = useColorModeValue("secondaryGray.900", "white");
   const textColorBrand = useColorModeValue("brand.500", "white");

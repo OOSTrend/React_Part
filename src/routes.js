@@ -50,7 +50,16 @@ const routes = [
     path: "/data-tables",
     component: DataTables,
   },
-
+  {
+    name: "태블로 리스트",
+    layout: "/admin",
+    path: "/tablo",
+    icon: <Icon as={MdBarChart} width='20px' height='20px' color='inherit' />,
+    component: Tablo,
+  },
+];
+export default routes;
+// additional part
   // {
   //   name: "Profile",
   //   layout: "/admin",
@@ -71,14 +80,4 @@ const routes = [
   //   path: "/rtl-default",
   //   icon: <Icon as={MdHome} width='20px' height='20px' color='inherit' />,
   //   component: RTL,
-  // },
-  {
-    name: "태블로 연결 샘플",
-    layout: "/admin",
-    path: "/tablo",
-    icon: <Icon as={MdBarChart} width='20px' height='20px' color='inherit' />,
-    component: Tablo,
-  },
-];
-
-export default routes;
+  // }
