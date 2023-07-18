@@ -22,7 +22,9 @@
 
 import React, { useEffect } from "react";
 //
+import { Redirect, Route, Switch } from 'react-router-dom';
 import {BrowserRouter} from "react-router-dom";
+// import {useParams} from "react-router-dom";
 // Chakra imports
 import {
   Box,
@@ -37,7 +39,7 @@ import {
 
 // Custom components
 import TabloCard from "components/card/TabloCard";
-import Card from "components/card/Card.js";
+//import Card from "components/card/Card.js";
 
 
 // Assets
@@ -48,10 +50,14 @@ import LCLS_fm from "assets/img/nfts/LCLS_fm.png"
 import LCLS_type from "assets/img/nfts/LCLS_type.png"
 // delete parts
 
-export default function Tablo() {
+export default function Marketplace() {
   // Chakra Color Mode
   const textColor = useColorModeValue("secondaryGray.900", "white");
   const textColorBrand = useColorModeValue("brand.500", "white");
+  //
+  // const {tablolistSlug} = useParams();
+  // const tablolist = gettablolistSlug(tablolistSlug);
+  //const tablolistColor = gettablolistColor(tablolist?.code);
   return (
     <Box pt={{ base: "180px", md: "80px", xl: "80px" }}>
       {/* Main Fields */}
@@ -81,7 +87,7 @@ export default function Tablo() {
                 author='태블로 샘플 1'
                 image={Pop}
                 // currentbid='0.91 ETH' 
-                download='#'
+                download='http://localhost:3000/horizon-ui-chakra#/tablo/tablo1'
               />
               <TabloCard
                 name='태블로 샘플 파트 2'

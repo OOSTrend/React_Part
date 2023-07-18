@@ -17,7 +17,7 @@ export default function Dashboard(props) {
 	const [ toggleSidebar, setToggleSidebar ] = useState(false);
 	// functions for changing the states from components
 	const getRoute = () => {
-		return window.location.pathname !== '/admin/full-screen-maps';
+		return window.location.pathname !== '/tablolist/full-screen-maps';
 	};
 	///
 	const getActiveRoute = (routes) => {
@@ -88,7 +88,7 @@ export default function Dashboard(props) {
 	///
 	const getRoutes = (routes) => {
 		return routes.map((prop, key) => {
-			if (prop.layout === '/admin') {
+			if (prop.layout === '/tablolist') {
 				return <Route path={prop.layout + prop.path} component={prop.component} key={key} />;
 			}
 			if (prop.collapse) {
@@ -132,13 +132,13 @@ export default function Dashboard(props) {
 							<Box>
 								<Navbar
 									onOpen={onOpen}
-									logoText={'1'}
+									logoText={'이거 누르면 결제하러감'}
 									brandText={getActiveRoute(routes)}
 									secondary={getActiveNavbar(routes)}
 									message={getActiveNavbarText(routes)}
 									fixed={fixed}
 									{...rest}
-								/>
+								/> 
 							</Box>
 						</Portal>
 

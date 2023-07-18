@@ -5,6 +5,8 @@ import { HashRouter, Route, Switch, Redirect } from 'react-router-dom';
 import AuthLayout from 'layouts/auth';
 import AdminLayout from 'layouts/admin';
 import RtlLayout from 'layouts/rtl';
+import TabloLayout from 'layouts/tablo';
+import TabloListLayout from 'layouts/tablolist';
 import { ChakraProvider } from '@chakra-ui/react';
 import theme from 'theme/theme';
 import { ThemeEditorProvider } from '@hypertheme-editor/chakra-ui';
@@ -18,6 +20,14 @@ ReactDOM.render(
 						<Route path={`/auth`} component={AuthLayout} />
 						<Route path={`/admin`} component={AdminLayout} />
 						<Route path={`/rtl`} component={RtlLayout} />
+						{/*  */}
+						{/* <Route path={`/tablolist`} component={TabloListLayout} /> */}
+						<Route path={`/tablo`} component={TabloLayout} />
+						<Route path={`/tablolist`}>
+							<Route index component ={TabloListLayout} />
+							{/* <Route path= {`/tablosample`} component = {TabloLayout} /> */}
+							{/* <Route path= {`/tablo`} component={TabloLayout} /> */}
+						</Route>
 						<Redirect from='/' to='/admin' />
 					</Switch>
 				</HashRouter>

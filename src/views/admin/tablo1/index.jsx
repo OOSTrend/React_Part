@@ -21,6 +21,7 @@
 */
 
 import React, { useEffect } from "react";
+import {BrowserRouter} from "react-router-dom";
 // Chakra imports
 import {
   Box,
@@ -31,7 +32,7 @@ import {
 
 // Assets
 
-export default function Tablo1() {
+export default function Marketplace() {
   //Chakra Color Mode
   const textColor = useColorModeValue("secondaryGray.900", "white");
   const textColorBrand = useColorModeValue("brand.500", "white");

@@ -37,11 +37,9 @@ import Usa from "assets/img/dashboards/usa.png";
 import MiniCalendar from "components/calendar/MiniCalendar";
 import MiniStatistics from "components/card/MiniStatistics";
 import IconBox from "components/icons/IconBox";
-import { OOSTrendLogo } from "components/icons/Icons";
-// import { NaverLogo } from "components/icons/Icons";
-// import { ReactComponent as Coupang } from "./Coupang_logo.svg";
-import { ReactComponent as Naver } from "./Naver_Logotype.svg";
-import { CoupangLogo } from "components/icons/Icons";
+//import { OOSTrendLogo } from "components/icons/Icons";
+
+import { ReactComponent as Naver } from "assets/img/logo/Naver_Logotype.svg";
 import React from "react";
 import {
   MdAddTask,
