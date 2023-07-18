@@ -38,9 +38,8 @@ import MiniCalendar from "components/calendar/MiniCalendar";
 import MiniStatistics from "components/card/MiniStatistics";
 import IconBox from "components/icons/IconBox";
 //import { OOSTrendLogo } from "components/icons/Icons";
-
+import React from 'react';
 import { ReactComponent as Naver } from "assets/img/logo/Naver_Logotype.svg";
-import React from "react";
 import {
   MdAddTask,
   MdAttachMoney,
@@ -68,6 +67,8 @@ export default function UserReports() {
   // Chakra Color Mode
   const brandColor = useColorModeValue("brand.500", "white");
   const boxBg = useColorModeValue("secondaryGray.300", "whiteAlpha.100");
+
+  //
   return (
     <Box pt={{ base: "130px", md: "80px", xl: "80px" }}>
       <SimpleGrid
@@ -106,27 +107,27 @@ export default function UserReports() {
           value='10개 기준'
         />
         {/* <MiniStatistics growth='+23%' name='클릭율' value='스마트 워치' /> */}
-        {/* <MiniStatistics
-        //   endContent={
-        //     <Flex me='-16px' mt='10px'>
-        //       <FormLabel htmlFor='balance'>
-        //         <Avatar src={Usa} />
-        //       </FormLabel>
-        //       <Select
-        //         id='balance'
-        //         variant='mini'
-        //         mt='5px'
-        //         me='0px'
-        //         defaultValue='usd'>
-        //         <option value='usd'>USD</option>
-        //         <option value='eur'>EUR</option>
-        //         <option value='gba'>GBA</option>
-        //       </Select>
-        //     </Flex>
-        //   }
-        //   name='Your balance'
-        //   value='$1,000'
-        // /> */}
+        <MiniStatistics
+           endContent={
+             <Flex me='-16px' mt='10px'>
+               <FormLabel htmlFor='balance'>
+                 <Avatar src={Usa} />
+               </FormLabel>
+               <Select
+                 id='balance'
+                 variant='mini'
+                 mt='5px'
+                 me='0px'
+                 defaultValue='usd'>
+                 <option value='usd'>USD</option>
+                 <option value='eur'>EUR</option>
+                 <option value='gba'>GBA</option>
+               </Select>
+             </Flex>
+           }
+           name='Your balance'
+           value='$1,000'
+        />
         <MiniStatistics
           startContent={
             <IconBox
@@ -139,7 +140,7 @@ export default function UserReports() {
           name='New Tasks'
           value='154'
         />
-        <MiniStatistics
+        {/* <MiniStatistics
           startContent={
             <IconBox
               w='56px'
@@ -152,7 +153,7 @@ export default function UserReports() {
           }
           name='볼수있는 카테고리'
           value='120개'
-        />
+        /> */}
       </SimpleGrid>
 
       <SimpleGrid columns={{ base: 1, md: 2, xl: 2 }} gap='20px' mb='20px'>

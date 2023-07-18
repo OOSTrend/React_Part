@@ -1,5 +1,7 @@
 import React from "react";
 import ReactApexChart from "react-apexcharts";
+//
+
 
 class LineChart extends React.Component {
   constructor(props) {
@@ -19,6 +21,8 @@ class LineChart extends React.Component {
   }
 
   render() {
+    //
+    console.log("render : LineChart 지금 실행된다. 그리고 이때의 chartData는 ",this.state.chartData)
     return (
       <ReactApexChart
         options={this.state.chartOptions}

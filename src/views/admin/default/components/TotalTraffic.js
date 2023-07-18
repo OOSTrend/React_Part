@@ -10,7 +10,7 @@ import {
 // Custom components
 import Card from "components/card/Card.js";
 import LineChart from "components/charts/LineChart";
-import React from "react";
+//import React from "react";
 import { IoCheckmarkCircle } from "react-icons/io5";
 import { MdBarChart, MdOutlineCalendarToday } from "react-icons/md";
 // Assets
@@ -20,7 +20,10 @@ import {
   lineChartOptionsTotalSpent,
   lineChartDataTotalTraffic,
   lineChartOptionsTotalTraffic,
+  lineChartDataCategory,
 } from "variables/charts";
+import React, { useState } from "react";
+import {Select} from "@chakra-ui/react";
 
 export default function TotalTraffic(props) {
   const { ...rest } = props;
@@ -40,6 +43,60 @@ export default function TotalTraffic(props) {
     { bg: "secondaryGray.300" },
     { bg: "whiteAlpha.100" }
   );
+  //
+  const CategoryArr = {
+    "가구/인테리어": [
+      {
+        name: "ClickRate",
+        data: [250, 90, 400, 123,487,798]
+      }
+    ],
+    "도서": [
+      {
+        name: "ClickRate",
+        data: [250, 310, 400, 211, 98, 364]
+      }
+    ],
+    "디지털/가전": [
+      {
+        name: "ClickRate",
+        data: [70, 90, 360, 210, 41, 71]
+      }
+    ],
+    "생활/건강": [
+      {
+        name: "ClickRate",
+        data: [500, 240, 100, 51, 23, 602]
+      }
+    ]
+  };
+  //
+  const [selectedValue, setSelectedValue] = useState("");
+  const handleChange = (event) => {
+    const selectedCategory = event.target.value;
+    // console.log("selectedCategory의 값(set함수 전) :",selectedCategory) 렌더링 전이라서 안된다고 함.
+    setSelectedValue(selectedCategory);
+    console.log("selectedCategory의 값(set함수 후) :",selectedCategory)
+
+    if (CategoryArr[selectedCategory]) {
+      const newData = CategoryArr[selectedCategory][0].data;
+      const updatedChartData = lineChartDataTotalTraffic.map((data) => ({
+        ...data,
+        data: newData,
+
+      }));
+      console.log("newData:",newData)
+      console.log("updatedChartData:",updatedChartData)
+
+      // 업데이트된 데이터로 lineChartDataTotalTraffic를 업데이트
+      console.log("0초기화 전 lineChartDataTotalTraffic:",lineChartDataTotalTraffic)
+      lineChartDataTotalTraffic.length = 0;
+      console.log("0초기화 후 lineChartDataTotalTraffic:",lineChartDataTotalTraffic)
+      Array.prototype.push.apply(lineChartDataTotalTraffic, updatedChartData);
+      console.log("apply 적용 후 lineChartDataTotalTraffic:",lineChartDataTotalTraffic)
+    }
+  };
+  //
   return (
     <Card
       justifyContent='center'
@@ -50,7 +107,7 @@ export default function TotalTraffic(props) {
       {...rest}>
       <Flex justify='space-between' ps='0px' pe='20px' pt='5px'>
         <Flex align='center' w='100%'>
-          <Button
+          {/* <Button
             bg={boxBg}
             fontSize='sm'
             fontWeight='500'
@@ -61,9 +118,27 @@ export default function TotalTraffic(props) {
               color={textColorSecondary}
               me='4px'
             />
-            This Year
-          </Button>
-          <Button
+            This month
+          </Button> */}
+          <Select placeholder="카테고리 선택" size="lg" onChange={handleChange} value={selectedValue}
+            bg={boxBg}
+            fontSize = 'sm'
+            fontWeight ='500'
+            color={textColorSecondary}
+            defaultValue='카테고리선택'>
+            <option value="카테고리선택">카테고리선택</option> 
+            <option value="가구/인테리어">가구/인테리어</option>
+            <option value="도서">도서</option>
+            <option value="디지털/가전">디지털/가전</option>
+            <option value="생활/건강">생활/건강</option>
+            <option value="스포츠/레저">스포츠/레저</option>
+            <option value="식품">식품</option>
+            <option value="출산/육아">출산/육아</option>
+            <option value="패션의류">패션의류</option>
+            <option value="패션잡화">패션잡화</option>
+            <option value="화장품/미용">화장품/미용</option>
+          </Select>
+          {/* <Button
             ms='auto'
             align='center'
             justifyContent='center'
@@ -77,7 +152,7 @@ export default function TotalTraffic(props) {
             borderRadius='10px'
             {...rest}>
             <Icon as={MdBarChart} color={iconColor} w='24px' h='24px' />
-          </Button>
+          </Button> */}
         </Flex>
       </Flex>
       <Flex w='100%' flexDirection={{ base: "column", lg: "row" }}>
@@ -117,6 +192,7 @@ export default function TotalTraffic(props) {
         <Box minH='260px' minW='75%' mt='auto'>
           <LineChart
             chartData={lineChartDataTotalTraffic}
+            //chartData = {lineChartDataCategory}
             chartOptions={lineChartOptionsTotalTraffic}
           />
         </Box>

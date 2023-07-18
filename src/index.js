@@ -20,8 +20,6 @@ ReactDOM.render(
 						<Route path={`/auth`} component={AuthLayout} />
 						<Route path={`/admin`} component={AdminLayout} />
 						<Route path={`/rtl`} component={RtlLayout} />
-						{/*  */}
-						{/* <Route path={`/tablolist`} component={TabloListLayout} /> */}
 						<Route path={`/tablo`} component={TabloLayout} />
 						<Route path={`/tablolist`}>
 							<Route index component ={TabloListLayout} />
