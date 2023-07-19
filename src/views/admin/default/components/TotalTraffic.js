@@ -21,6 +21,7 @@ import {
   lineChartDataTotalTraffic,
   lineChartOptionsTotalTraffic,
   lineChartDataCategory,
+  CategoryArr
 } from "variables/charts";
 import React, { useState } from "react";
 import {Select} from "@chakra-ui/react";
@@ -43,34 +44,6 @@ export default function TotalTraffic(props) {
     { bg: "secondaryGray.300" },
     { bg: "whiteAlpha.100" }
   );
-  //
-  const CategoryArr = {
-    "가구/인테리어": [
-      {
-        name: "ClickRate",
-        data: [250, 90, 400, 123,487,798]
-      }
-    ],
-    "도서": [
-      {
-        name: "ClickRate",
-        data: [250, 310, 400, 211, 98, 364]
-      }
-    ],
-    "디지털/가전": [
-      {
-        name: "ClickRate",
-        data: [70, 90, 360, 210, 41, 71]
-      }
-    ],
-    "생활/건강": [
-      {
-        name: "ClickRate",
-        data: [500, 240, 100, 51, 23, 602]
-      }
-    ]
-  };
-  //
   const [selectedValue, setSelectedValue] = useState("");
   const handleChange = (event) => {
     const selectedCategory = event.target.value;
@@ -96,7 +69,7 @@ export default function TotalTraffic(props) {
       console.log("apply 적용 후 lineChartDataTotalTraffic:",lineChartDataTotalTraffic)
     }
   };
-  //
+  
   return (
     <Card
       justifyContent='center'
@@ -192,11 +165,13 @@ export default function TotalTraffic(props) {
         <Box minH='260px' minW='75%' mt='auto'>
           <LineChart
             chartData={lineChartDataTotalTraffic}
-            //chartData = {lineChartDataCategory}
+            //chartData = {updatedChartData}
             chartOptions={lineChartOptionsTotalTraffic}
           />
         </Box>
       </Flex>
     </Card>
   );
-}
+};
+
+// export { updatedChartData };

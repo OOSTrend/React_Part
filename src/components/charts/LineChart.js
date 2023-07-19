@@ -1,6 +1,6 @@
 import React from "react";
 import ReactApexChart from "react-apexcharts";
-//
+// import updatedChartData from "C:\Users\sylee\Documents\GitHub\ndjs_test\src\views\admin\default\components\TotalTraffic.js"
 
 
 class LineChart extends React.Component {
@@ -13,13 +13,30 @@ class LineChart extends React.Component {
     };
   }
 
-  componentDidMount() {
+  componentDidMount = (event) => {
     this.setState({
       chartData: this.props.chartData,
       chartOptions: this.props.chartOptions,
     });
   }
-
+  //
+  componentDidUpdate(prevProps) {
+    if (this.props.chartData !== prevProps.chartData){
+      this.setState({
+        chartData: this.props.updatedChartData,
+        chartOptions: this.props.chartOptions,
+      })
+    }
+  }
+  // componentDidUpdate(prevProps, prevState) {
+  //   if (this.props.chartData !== prevProps.chartData){
+  //     this.setState({
+  //       chartData: this.props.chartData,
+  //       chartOptions: this.props.chartOptions,
+  //     })
+  //   }
+  // }
+  //
   render() {
     //
     console.log("render : LineChart 지금 실행된다. 그리고 이때의 chartData는 ",this.state.chartData)
@@ -36,3 +53,4 @@ class LineChart extends React.Component {
 }
 
 export default LineChart;
+
